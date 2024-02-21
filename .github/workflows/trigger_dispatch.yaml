@@ -11,6 +11,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
-          repository: gooddata/sandbox-repository
-          event-type: ext-update
-          client-payload: '{"value": "testPKL"}'
+          repository: gooddata/github-actions
+          event-type: public-ext-update
+          client-payload: '{"component": "${{ github.repository }}", "branch": "stable", "github_short_sha": "xxxyyyz" }'
