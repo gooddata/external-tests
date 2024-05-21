@@ -5,7 +5,9 @@ on:
 
 jobs:
   trigger-remote-job:
-    runs-on: infra1-small
+    runs-on:
+      group: infra1-runners-arc
+      labels: runners-small
     steps:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
